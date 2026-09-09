@@ -1,20 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --brand: #006156;
-  --brand-hover: #004b43;
-  --mint: #29a091;
-  --white: #ffffff;
+  --green-900: #00332d;
+  --green-800: #00483f;
+  --green-700: #006156;
+  --green-600: #00786b;
+  --green-500: #109083;
+  --green-400: #39ada3;
+  --green-300: #6fc5bd;
+  --green-200: #a5dcd7;
+  --green-100: #d5efec;
+  --green-50: #eef8f7;
+  --surface: #ffffff;
+  --surface-alt: #f4f8f7;
+  --brand: var(--green-700);
+  --brand-hover: var(--green-800);
+  --mint: var(--green-400);
+  --white: var(--surface);
   --black: #000000;
-  --ink: #192f2b;
-  --muted: #5e6c66;
-  --paper: #f5f7f4;
-  --line: #dbe2dc;
-  --on-brand: #d8e9e3;
+  --ink: #14201e;
+  --ink-soft: #4a5a57;
+  --muted: var(--ink-soft);
+  --paper: var(--surface-alt);
+  --line: #dfe8e6;
+  --on-brand: var(--green-100);
   --max-width: 1280px;
   --gutter: clamp(1.25rem, 4.5vw, 5rem);
   --section-space: clamp(3.5rem, 8vw, 7.5rem);
-  --header-height: 5.5rem;
+  --header-height: 6.5rem;
   --radius: 2px;
   --transition: 180ms ease;
   color-scheme: light;
@@ -92,14 +105,14 @@
   }
   .eyebrow {
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.6;
     letter-spacing: 0.13em;
     text-transform: uppercase;
     color: var(--brand);
   }
   .section-title {
-    font-size: clamp(2rem, 3.5vw, 3.25rem);
+    font-size: clamp(2rem, 3.6vw, 3.5rem);
     font-weight: 500;
     line-height: 1.16;
     letter-spacing: -0.045em;
@@ -200,13 +213,20 @@
     top: 0;
     z-index: 20;
     border-bottom: 1px solid var(--line);
-    background: var(--white);
+    background: #ffffffed;
+    backdrop-filter: blur(16px);
   }
   .brand {
     display: inline-flex;
     flex-direction: column;
     flex-shrink: 0;
     width: fit-content;
+  }
+  .brand-logo {
+    display: block;
+    width: 112px;
+    height: auto;
+    margin-block: -4px;
   }
   .brand-name {
     font-family: var(--font-manrope), sans-serif;
@@ -286,30 +306,43 @@
     color: var(--white);
   }
   .hero {
-    padding-top: clamp(2rem, 3.5vw, 3.25rem);
+    padding-top: clamp(1.5rem, 3vw, 3rem);
+    background: var(--white);
   }
   .hero-grid {
     display: grid;
-    grid-template-columns: 1.13fr 1fr;
-    gap: clamp(2rem, 5vw, 5rem);
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 4vw, 4rem);
     align-items: center;
   }
   .hero-copy {
     padding-block: 1.5rem;
   }
   .hero-title {
-    margin-top: 2rem;
+    margin-top: 1.75rem;
     font-family: var(--font-manrope), sans-serif;
-    font-size: clamp(3.5rem, 5.8vw, 5.25rem);
+    font-size: clamp(3.5rem, 5.1vw, 4.9rem);
     font-weight: 500;
     letter-spacing: -0.055em;
-    line-height: 1.09;
-    color: var(--brand);
+    line-height: 1.06;
+    color: var(--ink);
     text-wrap: initial;
+  }
+  .hero-title > span {
+    display: block;
+    color: var(--brand);
+  }
+  .location-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--brand);
+    box-shadow: 0 0 0 5px #0061560c;
   }
   .hero-description {
     margin-top: 1.75rem;
-    max-width: 25rem;
+    max-width: 28rem;
+    font-size: 1rem;
   }
   .hero-actions {
     display: flex;
@@ -320,19 +353,47 @@
   }
   .hero-figure {
     min-width: 0;
+    position: relative;
+    padding-bottom: 2rem;
   }
   .hero-image {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1.05;
+    aspect-ratio: 1 / 1.08;
     overflow: hidden;
     background: var(--paper);
+    border-radius: var(--radius);
   }
   .hero-figure figcaption {
-    margin-top: 0.75rem;
-    font-size: 0.625rem;
-    line-height: 1.5;
-    color: var(--muted);
+    position: absolute;
+    bottom: 0;
+    left: -1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem 2rem;
+    background: var(--brand);
+    color: white;
+    border-radius: var(--radius);
+    box-shadow: 0 12px 30px #003c3412;
+  }
+  .hero-figure figcaption strong {
+    display: block;
+    font-family: var(--font-manrope);
+    font-size: 0.9375rem;
+    font-weight: 500;
+  }
+  .hero-figure figcaption > span > span {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.6875rem;
+    color: var(--on-brand);
+  }
+  .photo-mark {
+    font-size: 3rem;
+    font-weight: 200;
+    line-height: 1;
+    color: var(--green-200);
   }
   .section-header {
     display: flex;
@@ -353,7 +414,7 @@
     border-bottom: 1px solid var(--line);
   }
   .service-row {
-    min-height: 5.25rem;
+    min-height: 6rem;
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -376,6 +437,15 @@
     font-variant-numeric: tabular-nums;
     letter-spacing: 0;
   }
+  .service-row .service-number {
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+  }
   .service-arrow {
     margin-left: auto;
     color: var(--brand);
@@ -390,6 +460,29 @@
     padding-block: clamp(4rem, 7vw, 6.25rem);
     background: var(--brand);
     color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .results-section::after {
+    content: "";
+    position: absolute;
+    width: 32rem;
+    height: 32rem;
+    border: 1px solid #ffffff12;
+    border-radius: 50%;
+    top: -18rem;
+    right: -4rem;
+    box-shadow: 0 0 0 3rem #ffffff04, 0 0 0 6rem #ffffff03;
+    pointer-events: none;
+  }
+  .portal-symbol {
+    display: grid;
+    place-items: center;
+    width: 3.25rem;
+    height: 3.25rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ffffff45;
+    border-radius: var(--radius);
   }
   .results-grid {
     display: grid;
@@ -415,9 +508,90 @@
     border-top: 1px solid var(--line);
     padding-top: 2rem;
   }
+  .about-section {
+    padding-top: 1rem;
+  }
+  .about-editorial {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: clamp(3rem, 7vw, 7rem);
+  }
+  .about-editorial-copy .section-title {
+    font-size: clamp(2rem, 3.1vw, 3rem);
+  }
+  .laboratory-photos {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 0.65fr;
+    align-items: end;
+    padding-block: 0 3rem;
+  }
+  .laboratory-photo-primary {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: 73%;
+    padding-bottom: 5rem;
+  }
+  .laboratory-photo-secondary {
+    grid-column: 2;
+    grid-row: 1;
+    width: 125%;
+    justify-self: end;
+    z-index: 1;
+  }
+  .laboratory-photo-frame {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 0.78;
+    border-radius: var(--radius);
+    background: var(--paper);
+  }
+  .laboratory-photo-secondary .laboratory-photo-frame {
+    border: 7px solid white;
+    aspect-ratio: 0.85;
+  }
+  .laboratory-photos figcaption {
+    margin-top: 0.875rem;
+    font-size: 0.6875rem;
+    color: var(--muted);
+  }
+  .laboratory-photo-secondary figcaption {
+    text-align: right;
+  }
+  .laboratory-photo-label {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    writing-mode: vertical-rl;
+    font-size: 0.625rem;
+    letter-spacing: 0.2em;
+    color: var(--brand);
+  }
+  .about-signature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid var(--line);
+    padding-top: 1.5rem;
+    margin-top: 2rem;
+  }
+  .about-signature > span {
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: var(--brand);
+  }
+  .about-signature p {
+    font-size: 0.8125rem;
+    line-height: 1.8;
+  }
+  .about-signature strong {
+    font-weight: 500;
+    color: var(--brand);
+  }
   .contact-section {
     padding-block: clamp(3.5rem, 6vw, 5.5rem);
-    background: var(--paper);
+    background: var(--white);
     border-top: 1px solid var(--line);
   }
   .contact-details {
@@ -432,6 +606,7 @@
   }
   .site-footer {
     padding-block: 3.5rem 1.5rem;
+    background: var(--white);
   }
   .page-intro {
     padding-block: 2rem 4rem;
@@ -514,9 +689,9 @@
     display: grid;
     grid-template-columns: 0.7fr repeat(3, 1fr);
     align-items: stretch;
-    margin-top: 3rem;
-    padding-block: 1.5rem;
-    border-block: 1px solid var(--line);
+    margin-top: 2.5rem;
+    padding-block: 1.75rem;
+    border-top: 1px solid var(--line);
   }
   .patient-links-label {
     max-width: 7rem;
@@ -545,10 +720,17 @@
     background: var(--paper);
     color: var(--brand);
   }
-  .patient-links a > span {
+  .patient-links a > span:not(.patient-link-number) {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+  }
+  .patient-link-number {
+    align-self: flex-start;
+    padding-top: 0.1rem;
+    font-size: 0.625rem;
+    color: var(--brand);
+    font-variant-numeric: tabular-nums;
   }
   .patient-link-detail {
     font-size: 0.6875rem;
@@ -587,6 +769,7 @@
     width: 0.375rem;
     height: 0.375rem;
     background: var(--on-brand);
+    border-radius: 50%;
   }
   .preparation-detail {
     border-bottom: 1px solid var(--line);
@@ -703,7 +886,7 @@
     gap: 2rem;
   }
   .hero-title {
-    font-size: clamp(3.25rem, 6vw, 4rem);
+    font-size: clamp(2.9rem, 5.5vw, 3.7rem);
   }
   .service-index {
     column-gap: 2.5rem;
@@ -726,6 +909,14 @@
   .patient-link-detail {
     font-size: 0.625rem;
   }
+  .hero-figure figcaption {
+    left: -0.75rem;
+    padding: 1.25rem;
+    gap: 0.75rem;
+  }
+  .hero-image {
+    aspect-ratio: 0.76;
+  }
 }
 @media (max-width: 767px) {
   :root {
@@ -740,7 +931,7 @@
   }
   .hero-title {
     max-width: 35rem;
-    font-size: clamp(3.25rem, 9vw, 4.5rem);
+    font-size: clamp(3.1rem, 8vw, 4.5rem);
     margin-top: 1.5rem;
   }
   .hero-description {
@@ -780,7 +971,25 @@
     display: none;
   }
   .hero-image {
-    aspect-ratio: 1.65;
+    aspect-ratio: 1.2;
+  }
+  .hero-figure figcaption {
+    left: 0.75rem;
+    right: 0.75rem;
+    padding: 1.25rem;
+  }
+  .about-editorial {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .about-editorial-copy {
+    grid-row: 1;
+  }
+  .laboratory-photos {
+    max-width: 34rem;
+    width: 100%;
+    margin-inline: auto;
+    padding-bottom: 0;
   }
   .patient-links {
     margin-top: 2rem;
@@ -805,6 +1014,9 @@
   }
 }
 @media (max-width: 639px) {
+  .brand-logo {
+    width: 88px;
+  }
   .site-header .site-container {
     gap: 0.5rem;
   }
@@ -831,7 +1043,7 @@
     letter-spacing: 0.08em;
   }
   .hero-title {
-    font-size: clamp(3.1rem, 12.8vw, 4rem);
+    font-size: clamp(2.85rem, 11.4vw, 4rem);
   }
   .hero-actions {
     align-items: stretch;
@@ -859,6 +1071,12 @@
     grid-template-columns: 1fr;
   }
   .hero-figure figcaption {
+    gap: 0.75rem;
+  }
+  .hero-figure figcaption strong {
+    font-size: 0.8125rem;
+  }
+  .hero-figure figcaption > span > span {
     font-size: 0.625rem;
   }
   .notice {
@@ -881,6 +1099,9 @@
   }
   .patient-links a > span {
     gap: 0.375rem;
+  }
+  .patient-links a > span:not(.patient-link-number) {
+    flex: 1;
   }
   .patient-link-detail {
     font-size: 0.6875rem;

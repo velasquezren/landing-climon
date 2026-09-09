@@ -1,5 +1,11 @@
-# Fotografía institucional
+# Fotografías de CLIMON
 
-`laboratory-placeholder.svg` es una composición abstracta temporal, no una fotografía de las instalaciones ni una propuesta de logo. No se descargaron imágenes externas.
+Copias originales de las tres imágenes proporcionadas en `imagenes/`:
 
-Agregar fotografías oficiales (por ejemplo `laboratorio.webp`) y cambiar `siteConfig.images.hero.src`, `alt`, `caption` y `position` en `src/config/site.ts`. El componente utiliza `next/image`, dimensiones reservadas y tamaños responsive. Preferir una fotografía vertical de al menos 1000 × 1200 px; ajustar el encuadre con `position`.
+- `climon-microscopia.jpeg`: archivo terminado en `(1)`, portada e imagen social.
+- `climon-analisis.jpeg`: archivo sin sufijo, presentación del laboratorio.
+- `climon-equipo.jpeg`: archivo terminado en `(2)`, presentación del laboratorio.
+
+Las fotografías se sirven con `next/image`, tamaños responsivos y carga diferida salvo la portada. Los encuadres se ajustan con CSS, conservando los originales. Las rutas y textos alternativos están centralizados en `src/config/site.ts`.
+
+`laboratory-placeholder.svg` queda como recurso histórico y ya no se utiliza.

@@ -39,7 +39,7 @@ export function SiteNavigation({
         })}
       </nav>
       <ButtonLink href={resultsUrl} className="header-results">
-        Ver mis resultados
+        Portal de resultados
       </ButtonLink>
       <MobileMenu
         key={pathname}
@@ -153,7 +153,7 @@ function MobileMenu({
           className="mobile-results"
           onClick={() => setOpen(false)}
         >
-          Ver mis resultados
+          Portal de resultados
           <Arrow />
         </Link>
       </nav>

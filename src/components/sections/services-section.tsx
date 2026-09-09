@@ -42,13 +42,13 @@ export function ServicesSection() {
       <Container>
         <div className="section-header">
           <SectionHeading eyebrow="Áreas de laboratorio" id="services-heading">
-            Distintas áreas.
+            Tu salud merece
             <br />
-            La misma atención.
+            una mirada completa.
           </SectionHeading>
           <p className="body-copy max-w-sm">
-            Estudios clínicos en distintas áreas del laboratorio, con la
-            atención que cada paciente merece.
+            Conoce nuestras ocho áreas de análisis clínicos y encuentra el
+            estudio que necesitas consultar.
           </p>
         </div>
         <ServiceIndex />

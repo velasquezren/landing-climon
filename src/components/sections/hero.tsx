@@ -30,56 +30,57 @@ export function Hero() {
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow flex items-center gap-3">
-              <span className="h-1.5 w-1.5 bg-mint" aria-hidden="true" />
+              <span className="location-dot" aria-hidden="true" />
               {siteConfig.descriptor} · Santa Cruz
             </p>
             <h1 id="hero-heading" className="hero-title">
-              Precisión para
-              <br className="hidden sm:block" /> cuidar lo
-              <br className="hidden sm:block" /> que importa.
+              La ciencia de
+              <br />
+              analizar.
+              <span>La vocación<br />de cuidarte.</span>
             </h1>
             <p className="intro-copy hero-description">
-              Análisis clínicos confiables, atención profesional y resultados
-              oportunos en Santa Cruz.
+              Detrás de cada muestra hay una persona. En CLIMON, unimos
+              análisis clínicos y atención cercana para acompañar el cuidado de tu salud.
             </p>
             <div className="hero-actions">
-              <ButtonLink href={siteConfig.resultsUrl}>
-                Ver mis resultados
+              <ButtonLink href="#servicios">
+                Explorar nuestros análisis
               </ButtonLink>
-              <ButtonLink href="#servicios" variant="text">
-                Conocer nuestros análisis
+              <ButtonLink href="#preparacion" variant="text">
+                Preparar mi visita
               </ButtonLink>
             </div>
             <a className="hero-help" href="#preparacion">
-              <span>¿Es tu primera visita?</span>
+              <span>Contigo, desde el primer paso.</span>
               <span>
-                Te orientamos <Arrow />
+                Orientación al paciente <Arrow />
               </span>
             </a>
           </div>
           <figure className="hero-figure">
-            <div className="figure-meta">
-              <span>Ciencia y atención humana</span>
-              <span>CLIMON</span>
-            </div>
             <div className="hero-image">
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
-                sizes="(max-width: 767px) 92vw, (max-width: 1399px) 44vw, 560px"
+                sizes="(max-width: 767px) 92vw, (max-width: 1399px) 47vw, 620px"
                 loading="eager"
                 fetchPriority="high"
                 style={{ objectFit: "cover", objectPosition: image.position }}
               />
             </div>
-            <figcaption>{image.caption}</figcaption>
+            <figcaption>
+              <span className="photo-mark" aria-hidden="true">+</span>
+              <span><strong>Ciencia con atención humana.</strong><span>{image.caption}</span></span>
+            </figcaption>
           </figure>
         </div>
         <nav className="patient-links" aria-label="Accesos para pacientes">
           <p className="patient-links-label">Tu visita, más sencilla.</p>
-          {patientLinks.map((link) => (
+          {patientLinks.map((link, index) => (
             <a key={link.href} href={link.href}>
+              <span className="patient-link-number" aria-hidden="true">0{index + 1}</span>
               <span>
                 <span className="patient-link-detail">{link.detail}</span>
                 <span className="patient-link-title">{link.title}</span>

@@ -1,81 +1,66 @@
-# Verificación — CLIMON
+# Verificación — identidad oficial de CLIMON
 
-Fecha: 8 de septiembre de 2026. Actualizado para la segunda iteración de diseño.
+Fecha: 9 de septiembre de 2026. Tercera iteración, con logo y fotografías suministrados por el propietario.
 
-## Resultado técnico
+## Código y compilación
 
-- Next.js 16.3.4 estable, confirmado mediante el registro npm.
-- `npm run build`: correcto. Home y páginas públicas prerenderizadas; seis rutas de preparación generadas con `generateStaticParams`.
-- `npm run typecheck`: correcto.
 - `npm run lint`: correcto, cero warnings.
+- `npm run typecheck`: correcto.
+- `npm run build -- --webpack`: correcto; 23 entradas estáticas generadas, incluidas las seis guías de preparación y las rutas de metadata.
 - `git diff --check`: correcto.
-- Sin dependencias adicionales de producción ni cambios de versiones en el lockfile.
-- Las herramientas de QA se instalaron solamente en `/tmp/climon-qa`.
+- Sin nuevas dependencias de producción ni cambios en el lockfile. Herramientas de revisión instaladas exclusivamente en `/tmp/climon-qa`.
 
-## Navegador y accesibilidad
+La compilación predeterminada con Turbopack encontró restricciones del entorno: primero la conexión a Google Fonts y después la apertura de un puerto interno del procesador CSS. Se verificó la producción con Webpack; el script habitual del proyecto sigue utilizando `next build`. Esto no constituye una verificación exitosa de Turbopack en este entorno.
 
-Revisión con Chromium sobre el build de producción en `http://127.0.0.1:3100`.
+## Navegador
 
-- Home a 320, 375, 390, 430, 768, 1024, 1440 y 1920 px: sin desbordamiento horizontal y con imágenes cargadas. Capturas en `/tmp/climon-qa/v2/home-*.png`.
-- Inspección visual de escritorio, móvil y página de resultados.
-- 14 páginas comprobadas: respuesta 200, un h1, idioma es-BO, canonical específico y ausencia de desbordamiento a 390 px.
-- 39 destinos internos verificados, incluidas anclas de servicios y salto al contenido.
-- axe: cero infracciones detectadas en las reglas WCAG 2 A/AA y 2.1 A/AA evaluadas en las 14 páginas.
-- Comprobación adicional de nombres accesibles de marca en 390 y 1440 px: correcta.
-- Menú móvil abierto: cero infracciones detectadas.
-- Teclado: salto al contenido, entrada a los enlaces del menú, Escape con retorno al botón y cierre al navegar.
-- Menú cerrado al pasar a escritorio.
-- `prefers-reduced-motion`: desplazamiento suave desactivado.
-- Contenido y CTA de resultados disponibles con JavaScript desactivado.
-- Página /resultados sin formularios, inputs ni marcos de terceros.
-- Temas inexistentes: 404 mediante `notFound()`, sin error en el servidor.
-- Sin errores JavaScript registrados en las páginas comprobadas.
+Chromium sobre el build de producción en `http://127.0.0.1:3200`.
 
-La revisión automática y las comprobaciones de teclado no equivalen a una auditoría completa con todas las tecnologías de asistencia.
+- Portada a 320, 375, 390, 430, 768, 1024, 1440 y 1920 px: sin desbordamiento horizontal; todas las imágenes cargadas.
+- Inspección visual de las capturas de escritorio y móvil y de la imagen Open Graph.
+- 14 páginas: respuesta 200, un único h1, canonical específico y sin desbordamiento a 390 px.
+- 22 destinos internos comprobados, incluidas las ocho anclas de servicios.
+- Menú móvil: abre, cierra con Escape devolviendo el foco al botón y cierra al navegar a Nosotros.
+- Primer desplegable: funciona con teclado y con JavaScript desactivado.
+- Movimiento reducido: desplazamiento suave desactivado.
+- Cero errores JavaScript registrados.
 
-## Comprobación de las mejoras
+Informes y capturas: `/tmp/climon-qa/v3/report.json`, `home-*.png`, `desktop-hero.png`, `mobile-hero.png` y `opengraph.png`.
 
-- Cabecera persistente: los destinos de los accesos quedan visibles debajo del header.
-- Estado activo correcto en páginas y subsecciones de preparación.
-- Desplegables con Enter, Espacio y puntero; funcionan también con JavaScript desactivado.
-- Dos desplegables abiertos simultáneamente: cero infracciones detectadas por axe.
-- Menú móvil abierto: cero infracciones detectadas.
-- Página de preparación y sus interacciones revisadas visualmente en móvil.
-- Sin nuevas dependencias. Referencias y decisiones en DISENO.md.
+## Accesibilidad
 
-## SEO y recursos
+axe, reglas WCAG 2 A/AA y 2.1 A/AA: cero infracciones detectadas en Inicio, Nosotros, Servicios, Preparación, Contacto y Resultados, tanto a 390 como a 1440 px (12 evaluaciones).
 
-Metadata por página, canonical, Open Graph, imagen social servida correctamente, Twitter card, robots.txt, sitemap.xml e icon.svg comprobados.
+Informe: `/tmp/climon-qa/v3/axe.json`. Las comprobaciones automáticas no equivalen a una auditoría con todas las tecnologías de asistencia.
 
-Las rutas de contenido pendiente llevan noindex y se excluyen del sitemap. Las imágenes se sirven localmente. Manrope y Geist se incluyen en el build mediante next/font.
+## Marca, fotografías y metadata
 
-El dominio `https://climon.com` sigue siendo el dominio previsto: confirmar en siteConfig.url o SITE_URL antes de publicar.
+- Logo oficial con proporción original en cabecera, pie y Open Graph.
+- Las tres fotografías se sirven mediante `next/image`, tamaños adaptables, prioridad alta en portada y carga diferida en las imágenes inferiores.
+- AVIF preferido y WebP alternativo, negociados por el optimizador de Next.js.
+- ICO, PNG de 96 px y Apple Touch Icon de 180 px mediante convenciones de archivos del App Router. No hay etiquetas manuales duplicadas.
+- El SVG entregado incrusta un PNG de 170 KB y no contiene vectores: se conserva entre los originales y se utiliza el PNG ligero como icono web.
+- Manifest tipado en modo navegador, identidad y colores institucionales, iconos de 192 y 512 px con `purpose: any`.
+- Siete recursos de identidad comprobados por HTTP: manifest, ICO, icono PNG, icono Apple, Open Graph y los dos iconos públicos. Respuesta 200 y tipos MIME correctos.
+- Las rutas pendientes conservan la política de noindex existente.
 
-## Lighthouse móvil
+## Pendientes institucionales
 
-Build de producción, medición local con emulación móvil predeterminada de Lighthouse:
+Dirección exacta, teléfono, WhatsApp, correo, horarios, mapa y redes; confirmación del dominio; indicaciones clínicas revisadas; documentos oficiales de privacidad y términos. El portal de resultados sigue siendo una página informativa de próxima disponibilidad.
+
+Los originales suministrados se conservan. No se añadieron contactos, certificaciones, estadísticas, testimonios ni recomendaciones clínicas ficticias.
+
+## Lighthouse móvil — versión final
+
+Medición local sobre el build de producción con Lighthouse 13.4.1 y emulación móvil predeterminada, después del ajuste de botones y fondos blancos:
 
 | Categoría | Puntuación |
 | --- | ---: |
-| Rendimiento | 99 |
+| Rendimiento | 97 |
 | Accesibilidad | 100 |
 | Buenas prácticas | 100 |
 | SEO | 100 |
 
-FCP: 0,8 s. LCP: 2,0 s. TBT: 100 ms. CLS: 0. Sin advertencias de ejecución.
+FCP: 0,8 s. LCP: 2,5 s. TBT: 20 ms. CLS: 0. Informe en `/tmp/climon-qa/v3/lighthouse.html` y datos en `lighthouse.json`.
 
-Informes: `/tmp/climon-qa/v2/lighthouse.report.html` y `/tmp/climon-qa/v2/lighthouse.report.json`.
-Comprobaciones de navegador: `/tmp/climon-qa/v2/report.json` y `/tmp/climon-qa/v2/interactions.json`.
-
-Las puntuaciones corresponden a la home con el recurso visual temporal y a este entorno local. Volver a medir tras incorporar fotografía definitiva y publicar en el dominio real.
-
-## Información oficial pendiente
-
-- Logo, isotipo y favicon definitivos.
-- Fotografía institucional.
-- Dirección exacta, teléfono, WhatsApp, correo, horario, mapa y redes.
-- Indicaciones médicas revisadas por el laboratorio.
-- Documentos oficiales de privacidad y términos.
-- Confirmación del dominio.
-
-No se añadieron datos clínicos, recomendaciones médicas específicas, testimonios, cifras, certificaciones ni contactos ficticios.
+Las puntuaciones corresponden a este entorno local; no garantizan el mismo resultado en el dominio publicado. El contraste y la accesibilidad se volvieron a revisar tras adoptar los nuevos neutros. Se inspeccionaron las capturas finales de portada en móvil y escritorio.

@@ -22,15 +22,23 @@ export const siteConfig = {
   },
   socials: [] as SocialLink[],
   brand: {
-    logo: "", // /brand/logo-climon.svg cuando exista el archivo oficial.
+    logo: "/brand/logo-climon.png",
     logoWhite: "",
   },
   images: {
     hero: {
-      src: "/images/laboratory-placeholder.svg",
-      alt: "Composición abstracta de planos translúcidos en tonos verdes; imagen temporal.",
-      caption: "Composición visual · fotografía institucional próximamente",
-      position: "center",
+      src: "/images/climon-microscopia.jpeg",
+      alt: "Profesional de CLIMON realizando una observación con el microscopio.",
+      caption: "Una mirada atenta. En cada análisis.",
+      position: "55% 40%",
+    },
+    analysis: {
+      src: "/images/climon-analisis.jpeg",
+      alt: "Profesional del laboratorio CLIMON observando una muestra en un tubo de ensayo.",
+    },
+    team: {
+      src: "/images/climon-equipo.jpeg",
+      alt: "Profesional de CLIMON trabajando con una micropipeta en el laboratorio.",
     },
   },
   about: {

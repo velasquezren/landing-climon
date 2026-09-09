@@ -25,7 +25,7 @@ npm start
 ## Estructura
 
 - `src/app`: rutas y metadata del App Router.
-- `src/components/layout`: cabecera, marca textual temporal, menú móvil y footer.
+- `src/components/layout`: cabecera, logo oficial, menú móvil y footer.
 - `src/components/sections`: secciones institucionales reutilizables.
 - `src/components/ui`: elementos compartidos.
 - `src/config/site.ts`: identidad, dominio previsto, contacto, recursos y URL de resultados.
@@ -39,9 +39,9 @@ La navegación (estado activo y menú móvil) es el único archivo propio con `u
 
 Editar `src/config/site.ts`. Los campos de contacto vacíos se identifican como pendientes y no generan enlaces falsos. WhatsApp acepta un número internacional solo con dígitos. Las redes solo aparecen al agregar entradas con `label` y `url`.
 
-Agregar el logo en `public/brand/logo-climon.svg` y asignar su ruta en `brand.logo`. La marca actual es texto y el favicon es una letra C temporal; no se ha creado un isotipo. Se reserva `brand.logoWhite` para una futura variante sobre verde.
+El logo oficial está en `public/brand/logo-climon.png` y se configura en `brand.logo`. Se conserva su proporción original. Los favicons suministrados se integran mediante las convenciones de archivos de Next.js en `src/app`.
 
-Agregar fotografía oficial en `public/images` y actualizar `images.hero`: ruta, descripción accesible, pie de imagen y encuadre. El SVG actual es abstracto y no representa las instalaciones. No hay fotografías externas ni identidades ficticias.
+Las tres fotografías suministradas están en `public/images`. `images.hero`, `images.analysis` e `images.team` centralizan sus rutas y descripciones accesibles. Se sirven con `next/image`; la portada tiene carga prioritaria y las imágenes inferiores usan carga diferida.
 
 Las indicaciones específicas de preparación están pendientes de revisión del laboratorio. Su contenido base vive en `src/data/preparation.ts`; las seis rutas se generan estáticamente. Cuando se publiquen guías oficiales, actualizar su contenido, retirar el `noindex` de esas páginas y añadirlas al sitemap.
 
@@ -53,7 +53,7 @@ Desplegable en Vercel con su configuración habitual para Next.js. Todas las pá
 
 `siteConfig.url` usa `https://climon.com` como dominio **previsto, pendiente de confirmación**. Puede sustituirse con la variable de servidor `SITE_URL` antes de compilar. Metadata, canonical y sitemap se derivan de ese valor. Confirmarlo antes de publicar.
 
-Se incluyen metadata por página, Open Graph con imagen generada localmente, Twitter card, sitemap, robots e icono temporal. Las páginas pendientes (resultados, temas específicos de preparación y documentos legales) llevan `noindex, follow` y no se incluyen en el sitemap. No se añade manifest de instalación porque esta fase no es una PWA.
+Se incluyen metadata por página, Open Graph con logo y fotografía oficiales, Twitter card, sitemap, robots y favicons oficiales. Las páginas pendientes (resultados, temas específicos de preparación y documentos legales) llevan `noindex, follow` y no se incluyen en el sitemap. El manifest de `src/app/manifest.ts` incluye los iconos de 192 y 512 px, identidad y colores. Usa `display: browser`: no implementa un servicio offline ni un portal clínico. Los iconos usan `purpose: any` para conservar íntegro el logo sin asumir una zona segura de recorte.
 
 Para incorporar Schema.org posteriormente, generar el JSON-LD en el Server Component correspondiente a partir de `siteConfig`, utilizando únicamente datos oficiales verificados. No se han supuesto dirección, coordenadas, horarios ni certificaciones.
 
@@ -63,7 +63,6 @@ Cambiar `siteConfig.resultsUrl` por `https://resultados.climon.com` cuando el po
 
 ## Pendientes para publicación institucional
 
-- Recursos oficiales de marca y fotografía.
 - Datos de atención y confirmación del dominio.
 - Indicaciones de preparación revisadas por el laboratorio.
 - Documentos oficiales de privacidad y términos.
@@ -73,3 +72,7 @@ La verificación de esta entrega se documenta en `VERIFICACION.md`.
 ## Segunda iteración visual
 
 Las referencias de diseño y los cambios aplicados están documentados en [DISENO.md](DISENO.md). La orientación inicial de preparación está disponible en la misma página mediante desplegables; las indicaciones clínicas oficiales siguen pendientes.
+
+## Identidad y fotografía — septiembre de 2026
+
+Portada con fotografía de microscopía, composición de las otras dos fotografías en home y Nosotros, jerarquía editorial renovada, navegación adaptable y acceso al futuro portal claramente identificado. No se agregaron dependencias de producción. Ver [DISENO.md](DISENO.md) y [VERIFICACION.md](VERIFICACION.md).

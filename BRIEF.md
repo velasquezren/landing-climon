@@ -8,16 +8,16 @@ Sin portal clínico funcional, autenticación, backend, APIs de negocio, base de
 
 ## Dirección visual
 
-Composición editorial, espacio negativo, verde institucional #006156, acento #29A091, blanco y texto oscuro. Manrope + Geist. Índice de servicios con divisores; sin tarjetas repetitivas, estadísticas, testimonios ni certificaciones inventadas. Movimiento mínimo y respeto por prefers-reduced-motion.
+Composición editorial, espacio negativo, verde institucional #006156, acento #39ADA3, blanco y texto oscuro. Manrope + Geist. Índice de servicios con divisores; sin tarjetas repetitivas, estadísticas, testimonios ni certificaciones inventadas. Movimiento mínimo y respeto por prefers-reduced-motion.
 
 ## Contenido
 
 Home: header, hero, ocho áreas de laboratorio, futuro portal, seis temas de preparación, presentación institucional, contacto y footer.
 Páginas: /servicios, /preparacion, /preparacion/[slug], /nosotros, /contacto, /resultados. Avisos de privacidad y términos pendientes en rutas propias, sin simular documentos aprobados.
 
-## Recursos pendientes
+## Recursos institucionales
 
-Logo e isotipo oficiales, fotografía del laboratorio, dirección, teléfono, WhatsApp, correo, horarios, mapas y redes. Todos los valores comerciales se gestionan desde src/config/site.ts. No descargar fotografías externas ni inventar recomendaciones clínicas. El recurso actual es una composición abstracta temporal, no una foto.
+Logo, favicons y tres fotografías oficiales incorporados el 9 de septiembre de 2026. Pendientes: dirección, teléfono, WhatsApp, correo, horarios, mapas y redes. Todos los valores comerciales se gestionan desde src/config/site.ts. No descargar fotografías externas ni inventar recomendaciones clínicas. La portada y presentación institucional utilizan las fotografías entregadas por el propietario.
 
 ## Verificación
 

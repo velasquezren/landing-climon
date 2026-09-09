@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button-link";
 import { siteConfig } from "@/config/site";
 import { pageMetadata } from "@/lib/metadata";
+import { LaboratoryPhotos } from "@/components/sections/about-section";
 
 export const metadata = pageMetadata(
   "Sobre CLIMON",
@@ -19,7 +20,8 @@ export default function AboutPage() {
         description={siteConfig.about.intro}
       />
       <section className="section-space">
-        <Container className="about-grid">
+        <Container className="about-editorial">
+          <LaboratoryPhotos />
           <div>
             <p className="eyebrow mb-5">{siteConfig.location}</p>
             <h2 className="section-title">
@@ -27,9 +29,7 @@ export default function AboutPage() {
               <br />
               Atención profesional.
             </h2>
-          </div>
-          <div className="about-copy">
-            <p className="body-copy">{siteConfig.about.description}</p>
+            <p className="body-copy mt-7">{siteConfig.about.description}</p>
             <ButtonLink href="/servicios" variant="text" className="mt-7">
               Conocer nuestros análisis
             </ButtonLink>

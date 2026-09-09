@@ -21,9 +21,9 @@ export default function Home() {
     <>
       <Hero />
       <ServicesSection />
-      <ResultsCTA />
-      <PreparationSection />
       <AboutSection />
+      <PreparationSection />
+      <ResultsCTA />
       <ContactSection />
     </>
   );

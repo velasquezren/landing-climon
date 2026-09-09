@@ -10,9 +10,10 @@ export function Brand() {
         <Image
           src={logo}
           alt={`${siteConfig.name} — ${siteConfig.descriptor}`}
-          width={174}
-          height={58}
-          className="h-12 w-auto"
+          width={1563}
+          height={1563}
+          sizes="(max-width: 639px) 88px, 112px"
+          className="brand-logo"
         />
       ) : (
         <>
