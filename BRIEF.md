@@ -1,28 +1,27 @@
-# CLIMON — versión pública inicial
+# CLIMON — sitio institucional
 
 ## Alcance
 
-Landing institucional de Laboratorio Clínico Climon S.R.L., Santa Cruz, Bolivia. Next.js estable, App Router, TypeScript, Tailwind, ESLint, next/font y next/image. Componentes de servidor por defecto.
+Sitio público de Laboratorio Clínico Climon S.R.L., parte de la Clínica Montalvo en Santa Cruz, Bolivia. La relación con la clínica fue confirmada por el propietario. Next.js 16.3.4, App Router, TypeScript, Tailwind, next/font y next/image; componentes de servidor por defecto.
 
-Sin portal clínico funcional, autenticación, backend, APIs de negocio, base de datos, archivos de pacientes ni datos clínicos ficticios. La ruta /resultados solo informa sobre su próxima disponibilidad.
+El propósito principal es presentar el laboratorio dentro de la atención de la clínica y orientar al paciente sobre sus resultados. El portal digital sigue pendiente: /resultados es informativo, sin autenticación, datos de pacientes ni resultados ficticios.
 
 ## Dirección visual
 
-Composición editorial, espacio negativo, verde institucional #006156, acento #39ADA3, blanco y texto oscuro. Manrope + Geist. Índice de servicios con divisores; sin tarjetas repetitivas, estadísticas, testimonios ni certificaciones inventadas. Movimiento mínimo y respeto por prefers-reduced-motion.
+Se conserva la composición editorial aprobada, predominio del blanco, escala de verdes con marca #006156 y acento #39ADA3, texto #14201E, botones con radio de 2 px, Manrope y Geist. Logo y tres fotografías oficiales. Sin estadísticas, testimonios ni certificaciones inventadas. Movimiento mínimo y respeto por prefers-reduced-motion.
 
 ## Contenido
 
-Home: header, hero, ocho áreas de laboratorio, futuro portal, seis temas de preparación, presentación institucional, contacto y footer.
-Páginas: /servicios, /preparacion, /preparacion/[slug], /nosotros, /contacto, /resultados. Avisos de privacidad y términos pendientes en rutas propias, sin simular documentos aprobados.
+Home: cabecera, portada con foco en resultados, cuatro accesos de atención, sección de resultados, presentación de CLIMON y Clínica Montalvo, seis preguntas de orientación al paciente, contacto y pie.
 
-## Recursos institucionales
+Rutas: /servicios presenta atención al paciente; /preparacion presenta orientación general y seis temas sobre resultados, visita y atención en la clínica; se conservan /nosotros, /contacto, /resultados y avisos legales. Los enlaces anteriores a temas específicos de preparación redirigen temporalmente a /preparacion.
 
-Logo, favicons y tres fotografías oficiales incorporados el 9 de septiembre de 2026. Pendientes: dirección, teléfono, WhatsApp, correo, horarios, mapas y redes. Todos los valores comerciales se gestionan desde src/config/site.ts. No descargar fotografías externas ni inventar recomendaciones clínicas. La portada y presentación institucional utilizan las fotografías entregadas por el propietario.
+No se publica un catálogo de estudios concretos sin confirmación del laboratorio. La página no ofrece instrucciones médicas ni interpretación de resultados.
+
+## Recursos e información
+
+Logo, favicons y fotografías oficiales incorporados. Datos centralizados en src/config/site.ts. Pendientes: enlace del portal de resultados si existe, dirección, teléfono, WhatsApp, correo, horarios, mapas, redes, confirmación del dominio y documentos legales oficiales.
 
 ## Verificación
 
-Lint sin warnings, TypeScript, build de producción, prerender de rutas, enlaces, metadata, imágenes, teclado y navegación móvil. Revisar 375, 390, 430, 768, 1024, 1440 y 1920 px. Lighthouse orientativo >=95 en sus cuatro categorías, sin atribuir resultados no medidos.
-
-## Segunda iteración
-
-Se conserva el alcance público. Se añaden accesos para pacientes, navegación persistente y activa, orientación desplegable sin JavaScript y una lista para preparar la consulta. Se reducen textos repetidos y espacios móviles. Referencias y decisiones: DISENO.md. Las indicaciones clínicas específicas siguen pendientes de aprobación del laboratorio.
+Lint, TypeScript, compilación de producción, enlaces y redirecciones, metadata, imágenes, teclado y navegación móvil. Detalles en VERIFICACION.md y decisiones en DISENO.md.

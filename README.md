@@ -33,7 +33,7 @@ npm start
 - `src/lib/metadata.ts`: metadata consistente por página.
 - `public/brand`, `public/images`: recursos locales.
 
-La navegación (estado activo y menú móvil) es el único archivo propio con `use client`. Los temas de preparación usan `details` y `summary` nativos y funcionan sin JavaScript. Usa un patrón de navegación desplegable, Escape, cierre al salir del foco y estado expandido; no es un diálogo modal. El contenido permanece disponible como HTML estático.
+La navegación (estado activo y menú móvil) es el único archivo propio con `use client`. Los temas de preparación usan `details` y `summary` nativos y funcionan sin JavaScript. Usa un patrón de navegación desplegable, Escape, cierre al salir del foco y estado expandido; no es un diálogo modal. El contenido permanece disponible como HTML estático. CLIMON se presenta como laboratorio clínico de la Clínica Montalvo, con foco en resultados y orientación al paciente.
 
 ## Actualizar información oficial
 
@@ -43,7 +43,7 @@ El logo oficial está en `public/brand/logo-climon.png` y se configura en `brand
 
 Las tres fotografías suministradas están en `public/images`. `images.hero`, `images.analysis` e `images.team` centralizan sus rutas y descripciones accesibles. Se sirven con `next/image`; la portada tiene carga prioritaria y las imágenes inferiores usan carga diferida.
 
-Las indicaciones específicas de preparación están pendientes de revisión del laboratorio. Su contenido base vive en `src/data/preparation.ts`; las seis rutas se generan estáticamente. Cuando se publiquen guías oficiales, actualizar su contenido, retirar el `noindex` de esas páginas y añadirlas al sitemap.
+La orientación al paciente vive en `src/data/preparation.ts`: resultados, entrega, solicitud de estudios, visita y atención en la clínica. Las seis rutas se generan estáticamente. Los antiguos enlaces a temas específicos redirigen temporalmente a `/preparacion`. No se publica un catálogo de estudios sin confirmar su alcance con el laboratorio.
 
 Los documentos de privacidad y términos son avisos de contenido pendiente, no textos legales aprobados.
 
@@ -76,3 +76,7 @@ Las referencias de diseño y los cambios aplicados están documentados en [DISEN
 ## Identidad y fotografía — septiembre de 2026
 
 Portada con fotografía de microscopía, composición de las otras dos fotografías en home y Nosotros, jerarquía editorial renovada, navegación adaptable y acceso al futuro portal claramente identificado. No se agregaron dependencias de producción. Ver [DISENO.md](DISENO.md) y [VERIFICACION.md](VERIFICACION.md).
+
+## Enfoque en Clínica Montalvo y resultados
+
+La portada prioriza la información de resultados y la relación institucional con Clínica Montalvo. Se conservan las seis secciones y el diseño aprobado. El índice de especialidades se sustituye por cuatro accesos de atención, y las preguntas frecuentes se orientan a resultados y visita. El portal sigue identificado como próximo a habilitarse hasta recibir su URL oficial.

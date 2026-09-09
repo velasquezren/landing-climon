@@ -1,4 +1,24 @@
-# Verificación — identidad oficial de CLIMON
+# Verificación — resultados y Clínica Montalvo
+
+9 de septiembre de 2026. Cuarta iteración: ajuste editorial conservando el diseño aprobado.
+
+- `npm run lint`, `npm run typecheck` y `npm run build -- --webpack`: correctos. 23 entradas estáticas generadas.
+- Portada en ocho anchos (320–1920 px): imágenes cargadas, sin desbordamiento horizontal. Capturas de móvil y escritorio inspeccionadas.
+- 14 páginas y 14 destinos internos comprobados: respuesta 200, h1 único y canonical específico en cada página.
+- Acción principal dirigida a `/resultados`, relación con Clínica Montalvo visible y ausencia del catálogo de estudios no confirmados en la portada.
+- Seis URLs antiguas de preparación: redirección temporal 307 a `/preparacion`.
+- Portal de resultados identificado como próximo a habilitarse; no consulta ni muestra resultados de pacientes.
+- Menú, Escape, navegación, desplegables con teclado y sin JavaScript, y movimiento reducido: correctos. Cero errores JavaScript.
+- axe: cero infracciones WCAG A/AA detectadas en seis páginas principales a 390 y 1440 px.
+- No se añadieron dependencias ni se modificaron los recursos originales.
+
+Informes actuales: `/tmp/climon-qa/v4/report.json`, `axe.json` y `home-*.png`. La imagen social también se volvió a generar y su ruta respondió correctamente.
+
+No se repitió Lighthouse para este ajuste editorial. Las puntuaciones que aparecen a continuación corresponden a la tercera iteración, no a una nueva medición.
+
+---
+
+## Historial: identidad oficial de CLIMON
 
 Fecha: 9 de septiembre de 2026. Tercera iteración, con logo y fotografías suministrados por el propietario.
 

@@ -36,14 +36,14 @@ export default async function PreparationTopicPage({
   return (
     <>
       <PageIntro
-        eyebrow="Preparación"
+        eyebrow="Tu visita"
         title={topic.title}
         description={topic.description}
       />
       <section className="section-space">
         <Container>
           <div className="notice max-w-3xl">
-            <p className="eyebrow mb-4">Guía pendiente de publicación</p>
+            <p className="eyebrow mb-4">Orientación al paciente</p>
             <h2 className="text-2xl font-medium">{topic.question}</h2>
             <p className="body-copy mt-5">{topic.guidance}</p>
             <p className="body-copy mt-5">{preparationNotice}</p>

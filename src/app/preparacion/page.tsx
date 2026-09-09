@@ -5,8 +5,8 @@ import { visitChecklist, preparationNotice } from "@/data/preparation";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata(
-  "Preparación para análisis",
-  "Orientación para organizar tu visita a CLIMON y consultar la preparación de tus análisis.",
+  "Tu visita y tus resultados",
+  "Orientación para pacientes de la Clínica Montalvo sobre su visita al laboratorio CLIMON y la entrega de resultados.",
   "/preparacion",
 );
 
@@ -14,9 +14,9 @@ export default function PreparationPage() {
   return (
     <>
       <PageIntro
-        eyebrow="Preparación"
-        title="Una visita bien preparada."
-        description="Reúne tus dudas y confirma las indicaciones de tu estudio con el laboratorio. Aquí tienes un punto de partida."
+        eyebrow="Tu visita"
+        title="Contigo, antes y después de tu visita."
+        description="Encuentra orientación sobre tu atención en CLIMON, la solicitud de tu estudio y la entrega de resultados."
       />
       <section className="section-space" aria-labelledby="visit-heading">
         <Container>

@@ -5,8 +5,8 @@ import { ServiceIndex } from "@/components/sections/services-section";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata(
-  "Áreas de laboratorio",
-  "Conoce las áreas de análisis clínicos de CLIMON en Santa Cruz, Bolivia.",
+  "Atención al paciente",
+  "Información de resultados y orientación para pacientes de CLIMON, laboratorio clínico de la Clínica Montalvo.",
   "/servicios",
 );
 
@@ -14,24 +14,24 @@ export default function ServicesPage() {
   return (
     <>
       <PageIntro
-        eyebrow="Servicios"
-        title="Análisis clínicos. Atención especializada."
-        description="Conoce las áreas de estudio de nuestro laboratorio."
+        eyebrow="Atención"
+        title="Tu laboratorio. Parte de tu clínica."
+        description="CLIMON acompaña tu atención en la Clínica Montalvo. Encuentra información sobre tus resultados y orientación para tu visita."
       />
-      <section className="section-space" aria-label="Áreas de análisis">
+      <section className="section-space" aria-label="Atención al paciente">
         <Container>
           <ServiceIndex linked={false} />
           <div className="notice mt-12">
             <h2 className="text-xl font-medium">
-              Información sobre tu estudio
+              Tu estudio y tus resultados
             </h2>
             <p className="body-copy mt-3 max-w-2xl">
-              Consulta con el laboratorio la disponibilidad, preparación y plazo
-              de entrega del análisis solicitado.
+              Confirma con el equipo de atención las indicaciones de tu estudio
+              y la modalidad de entrega de resultados.
             </p>
             <div className="mt-5 flex flex-wrap gap-x-8 gap-y-2">
               <ButtonLink href="/preparacion" variant="text">
-                Preparación para análisis
+                Orientación para tu visita
               </ButtonLink>
               <ButtonLink href="/contacto" variant="text">
                 Información de contacto

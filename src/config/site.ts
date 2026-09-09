@@ -3,11 +3,12 @@ type SocialLink = { label: string; url: string };
 export const siteConfig = {
   name: "CLIMON",
   descriptor: "Laboratorio Clínico",
+  clinicName: "Clínica Montalvo",
   legalName: "Laboratorio Clínico Climon S.R.L.",
   location: "Santa Cruz, Bolivia",
-  title: "CLIMON | Laboratorio Clínico en Santa Cruz, Bolivia",
+  title: "CLIMON | Laboratorio Clínico de la Clínica Montalvo",
   description:
-    "Laboratorio Clínico CLIMON en Santa Cruz. Análisis de hematología, bioquímica clínica, hormonas, serología, urianálisis, microbiología y más.",
+    "CLIMON, laboratorio clínico de la Clínica Montalvo en Santa Cruz. Información de resultados y orientación para acompañar tu atención en la clínica.",
   // Dominio previsto: confirmar antes de publicar. SITE_URL permite sustituirlo.
   url: process.env.SITE_URL || "https://climon.com",
   resultsUrl: "/resultados",
@@ -29,7 +30,7 @@ export const siteConfig = {
     hero: {
       src: "/images/climon-microscopia.jpeg",
       alt: "Profesional de CLIMON realizando una observación con el microscopio.",
-      caption: "Una mirada atenta. En cada análisis.",
+      caption: "Detrás de cada resultado, una persona.",
       position: "55% 40%",
     },
     analysis: {
@@ -43,16 +44,16 @@ export const siteConfig = {
   },
   about: {
     intro:
-      "Laboratorio Clínico Climon S.R.L. es un centro especializado en análisis clínicos en Bolivia.",
+      "CLIMON es el laboratorio clínico que forma parte de la Clínica Montalvo, en Santa Cruz, Bolivia.",
     description:
-      "Ofrece estudios en hematología, bioquímica clínica, urianálisis, parasitología, serología, hormonas, espermogramas y cultivos bacteriológicos.",
+      "Acompañamos la atención de los pacientes de la clínica a través del trabajo de laboratorio y los resultados de sus estudios, como parte del cuidado y seguimiento de su salud.",
   },
 };
 
 export const navigation = [
   { label: "Inicio", href: "/" },
-  { label: "Servicios", href: "/servicios" },
-  { label: "Preparación", href: "/preparacion" },
+  { label: "Atención", href: "/servicios" },
+  { label: "Tu visita", href: "/preparacion" },
   { label: "Nosotros", href: "/nosotros" },
   { label: "Contacto", href: "/contacto" },
 ] as const;

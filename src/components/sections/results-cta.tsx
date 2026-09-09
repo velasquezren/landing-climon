@@ -4,7 +4,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 
 export function ResultsCTA() {
   return (
-    <section className="results-section" aria-labelledby="results-heading">
+    <section id="resultados" className="results-section" aria-labelledby="results-heading">
       <Container className="results-grid">
         <div>
           <div className="portal-symbol" aria-hidden="true">
@@ -15,9 +15,9 @@ export function ResultsCTA() {
           </div>
           <p className="eyebrow mb-6 text-on-brand">Tu espacio de resultados</p>
           <h2 id="results-heading" className="section-title text-white">
-            Más cerca de ti.
+            Tus resultados.
             <br />
-            También en digital.
+            Parte de tu cuidado.
           </h2>
         </div>
         <div className="results-copy">
@@ -26,8 +26,8 @@ export function ResultsCTA() {
             Disponible próximamente
           </p>
           <p className="text-lg leading-relaxed text-on-brand">
-            Estamos preparando un espacio para consultar tus estudios de forma
-            rápida, privada y segura.
+            Estamos preparando el acceso digital a tus resultados de CLIMON,
+            el laboratorio clínico de la {siteConfig.clinicName}.
           </p>
           <ButtonLink
             href={siteConfig.resultsUrl}

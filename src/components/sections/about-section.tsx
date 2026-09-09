@@ -23,12 +23,11 @@ export function AboutSection() {
             {siteConfig.about.intro}
           </p>
           <p className="body-copy mt-4">
-            Nuestro trabajo comienza con una muestra, pero tiene un propósito
-            mucho más grande: acompañarte en el cuidado de lo que más importa.
+            {siteConfig.about.description}
           </p>
           <div className="about-signature">
             <span aria-hidden="true">+</span>
-            <p>Análisis clínicos.<br /><strong>Atención de persona a persona.</strong></p>
+            <p>Parte de la {siteConfig.clinicName}.<br /><strong>Atención de persona a persona.</strong></p>
           </div>
           <ButtonLink href="/nosotros" variant="text" className="mt-7">
             Conoce CLIMON

@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = {
   ...pageMetadata(
-    "Laboratorio Clínico en Santa Cruz, Bolivia",
+    "Laboratorio Clínico de la Clínica Montalvo",
     siteConfig.description,
     "/",
   ),
@@ -21,9 +21,9 @@ export default function Home() {
     <>
       <Hero />
       <ServicesSection />
+      <ResultsCTA />
       <AboutSection />
       <PreparationSection />
-      <ResultsCTA />
       <ContactSection />
     </>
   );

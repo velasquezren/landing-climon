@@ -4,7 +4,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { siteConfig } from "@/config/site";
 
-export const alt = "CLIMON — Ciencia y atención humana en Santa Cruz, Bolivia";
+export const alt = "CLIMON — Laboratorio Clínico de la Clínica Montalvo";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -20,10 +20,10 @@ export default function OpenGraphImage() {
           <span style={{ fontSize: 17, color: "#006156" }}>LABORATORIO CLÍNICO</span>
         </div>
         <div style={{ display: "flex", flexDirection: "column", fontSize: 65, letterSpacing: -3, lineHeight: 1.08 }}>
-          <span>La ciencia de analizar.</span>
+          <span>Resultados para tu salud.</span>
           <span style={{ color: "#006156", marginTop: 12 }}>La vocación de cuidarte.</span>
         </div>
-        <span style={{ fontSize: 20, color: "#006156" }}>{siteConfig.location}</span>
+        <span style={{ fontSize: 20, color: "#006156" }}>{siteConfig.clinicName} · {siteConfig.location}</span>
       </div>
       <div style={{ width: 530, height: 630, display: "flex", position: "relative" }}>
         <img src={`data:image/jpeg;base64,${photo}`} width={530} height={630} alt="Profesional de CLIMON en el microscopio" style={{ objectFit: "cover" }} />

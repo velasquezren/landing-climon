@@ -6,9 +6,9 @@ import { Arrow } from "@/components/ui/arrow";
 
 const patientLinks = [
   {
-    href: "#servicios",
-    title: "Conoce nuestros análisis",
-    detail: "Áreas de laboratorio",
+    href: "#resultados",
+    title: "Información de resultados",
+    detail: "Tu atención en CLIMON",
   },
   {
     href: "#preparacion",
@@ -31,21 +31,22 @@ export function Hero() {
           <div className="hero-copy">
             <p className="eyebrow flex items-center gap-3">
               <span className="location-dot" aria-hidden="true" />
-              {siteConfig.descriptor} · Santa Cruz
+              {siteConfig.descriptor} · {siteConfig.clinicName}
             </p>
             <h1 id="hero-heading" className="hero-title">
-              La ciencia de
+              Resultados para
               <br />
-              analizar.
+              tu salud.
               <span>La vocación<br />de cuidarte.</span>
             </h1>
             <p className="intro-copy hero-description">
-              Detrás de cada muestra hay una persona. En CLIMON, unimos
-              análisis clínicos y atención cercana para acompañar el cuidado de tu salud.
+              Somos CLIMON, el laboratorio clínico de la {siteConfig.clinicName}.
+              Acompañamos tu atención con resultados que forman parte del cuidado
+              de tu salud.
             </p>
             <div className="hero-actions">
-              <ButtonLink href="#servicios">
-                Explorar nuestros análisis
+              <ButtonLink href={siteConfig.resultsUrl}>
+                Información de resultados
               </ButtonLink>
               <ButtonLink href="#preparacion" variant="text">
                 Preparar mi visita

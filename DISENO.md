@@ -44,3 +44,18 @@ El SVG suministrado contiene un PNG incrustado de 170 KB, sin trazados vectorial
 ### Ajuste solicitado antes de publicar
 
 Se recupera la estética minimalista: botones y marcos con radio de 2 px, portada, contacto y pie sobre blanco. La sección de preparación utiliza el neutro casi blanco `#F4F8F7`; el bloque del futuro portal conserva el verde institucional. Se adopta la escala de verdes suministrada como tokens y se ajustan texto y divisores a sus neutros. No se añaden acentos rosa ni bloques beige. Se conservan composición, contenido y fotografías.
+
+
+## Cuarta iteración — resultados y Clínica Montalvo
+
+A petición del propietario se conserva el diseño aprobado y se ajusta el contenido a la función de CLIMON dentro de la Clínica Montalvo:
+
+- Portada «Resultados para tu salud. La vocación de cuidarte.» y acción principal de información de resultados.
+- Relación con Clínica Montalvo explícita en portada, presentación institucional, páginas internas, metadata e imagen social.
+- Mismo índice editorial, con cuatro accesos de atención en lugar de especialidades no confirmadas.
+- Sección de resultados situada antes de la presentación institucional; conserva el estado de próxima disponibilidad del portal.
+- Mismos desplegables con seis temas generales: consulta y entrega de resultados, solicitud, visita, consulta en la clínica y atención al paciente.
+- Enlaces antiguos a preparación específica redirigidos temporalmente a la orientación general.
+- Se mantienen las seis secciones, las fotografías, los favicons, el blanco y los botones minimalistas. Se restituye el espacio superior del bloque institucional tras cambiar su posición.
+
+La relación con la clínica procede de la información del propietario. No se añaden plazos de entrega, interpretación clínica, automatismos de integración ni servicios específicos no confirmados.

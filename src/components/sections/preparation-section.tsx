@@ -52,17 +52,17 @@ export function PreparationSection() {
     >
       <Container className="preparation-grid">
         <div>
-          <SectionHeading eyebrow="Antes de tu visita" id="preparation-heading">
-            Un poco de preparación.
+          <SectionHeading eyebrow="Orientación al paciente" id="preparation-heading">
+            Menos dudas.
             <br />
             Más tranquilidad.
           </SectionHeading>
           <p className="body-copy mt-6 max-w-sm">
             Resuelve tus primeras dudas sin salir de esta página. Selecciona un
-            tema para saber qué consultar antes de tu análisis.
+            tema para orientarte sobre tu visita o la entrega de resultados.
           </p>
           <ButtonLink href="/preparacion" variant="text" className="mt-6">
-            Preparar mi visita
+            Orientación para mi atención
           </ButtonLink>
           <div className="preparation-note">
             <span className="eyebrow">Información para pacientes</span>

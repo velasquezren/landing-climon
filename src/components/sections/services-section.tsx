@@ -11,7 +11,7 @@ export function ServiceIndex({ linked = true }: { linked?: boolean }) {
       {services.map((service, index) => (
         <li key={service.slug} id={linked ? undefined : service.slug}>
           {linked ? (
-            <Link href={`/servicios#${service.slug}`} className="service-row">
+            <Link href={service.href} className="service-row">
               <span className="service-number">
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -23,7 +23,10 @@ export function ServiceIndex({ linked = true }: { linked?: boolean }) {
               <span className="service-number">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h2>{service.name}</h2>
+              <div>
+                <h2>{service.name}</h2>
+                <p className="body-copy mt-3 text-sm">{service.description}</p>
+              </div>
             </div>
           )}
         </li>
@@ -41,20 +44,20 @@ export function ServicesSection() {
     >
       <Container>
         <div className="section-header">
-          <SectionHeading eyebrow="Áreas de laboratorio" id="services-heading">
-            Tu salud merece
+          <SectionHeading eyebrow="Para pacientes de la clínica" id="services-heading">
+            Tu atención continúa.
             <br />
-            una mirada completa.
+            Estamos contigo.
           </SectionHeading>
           <p className="body-copy max-w-sm">
-            Conoce nuestras ocho áreas de análisis clínicos y encuentra el
-            estudio que necesitas consultar.
+            Información de resultados, orientación y atención del laboratorio,
+            como parte de tu experiencia en la Clínica Montalvo.
           </p>
         </div>
         <ServiceIndex />
         <div className="mt-8 flex justify-end">
           <ButtonLink href="/servicios" variant="text">
-            Todos nuestros servicios
+            Conocer nuestra atención
           </ButtonLink>
         </div>
       </Container>

@@ -25,13 +25,13 @@ export default function AboutPage() {
           <div>
             <p className="eyebrow mb-5">{siteConfig.location}</p>
             <h2 className="section-title">
-              Análisis clínicos.
+              Parte de tu clínica.
               <br />
-              Atención profesional.
+              Cerca de ti.
             </h2>
             <p className="body-copy mt-7">{siteConfig.about.description}</p>
             <ButtonLink href="/servicios" variant="text" className="mt-7">
-              Conocer nuestros análisis
+              Conocer nuestra atención
             </ButtonLink>
           </div>
         </Container>
