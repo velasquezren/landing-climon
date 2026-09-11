@@ -228,6 +228,11 @@
     height: auto;
     margin-block: -4px;
   }
+  .brand-wordmark {
+    display: block;
+    width: clamp(8rem, 24vw, 12.5rem);
+    height: auto;
+  }
   .brand-name {
     font-family: var(--font-manrope), sans-serif;
     font-size: 2rem;
@@ -843,6 +848,28 @@
   .visit-checklist .body-copy {
     font-size: 0.9375rem;
   }
+  .area-index {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid var(--line);
+  }
+  .area-index li {
+    padding: 2rem 2rem 2rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .area-index li:not(:nth-child(3n + 1)) {
+    padding-left: 2rem;
+    border-left: 1px solid var(--line);
+  }
+  .area-index h3 {
+    margin-block: 1.25rem 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+  }
+  .area-index .body-copy {
+    font-size: 0.9375rem;
+  }
   .preparation-topics {
     margin-top: var(--section-space);
     padding-top: var(--section-space);
@@ -870,6 +897,17 @@
   }
 }
 @media (max-width: 1023px) {
+  .area-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .area-index li:not(:nth-child(3n + 1)) {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .area-index li:nth-child(even) {
+    padding-left: 2rem;
+    border-left: 1px solid var(--line);
+  }
   .header-results {
     margin-left: auto;
   }
@@ -910,6 +948,14 @@
   }
 }
 @media (max-width: 767px) {
+  .area-index {
+    grid-template-columns: 1fr;
+  }
+  .area-index li,
+  .area-index li:nth-child(even) {
+    padding: 1.5rem 0;
+    border-left: 0;
+  }
   :root {
     --header-height: 5rem;
   }
@@ -1010,12 +1056,6 @@
   }
   .site-header .site-container {
     gap: 0.5rem;
-  }
-  .site-header .brand-name {
-    font-size: 1.625rem;
-  }
-  .site-header .brand-descriptor {
-    font-size: 0.5625rem;
   }
   .header-results {
     min-height: 2.75rem;

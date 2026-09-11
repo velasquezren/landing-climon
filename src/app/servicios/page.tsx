@@ -2,11 +2,12 @@ import { PageIntro } from "@/components/ui/page-intro";
 import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button-link";
 import { ServiceIndex } from "@/components/sections/services-section";
+import { AreasSection } from "@/components/sections/areas-section";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata(
-  "Atención al paciente",
-  "Información de resultados y orientación para pacientes de CLIMON, laboratorio clínico de la Clínica Montalvo.",
+  "Áreas de análisis y atención al paciente",
+  "Las seis áreas de análisis de CLIMON, laboratorio clínico de la Clínica Montalvo: hematología, química sanguínea, urianálisis, parasitología, serología y hormonas.",
   "/servicios",
 );
 
@@ -16,9 +17,13 @@ export default function ServicesPage() {
       <PageIntro
         eyebrow="Atención"
         title="Tu laboratorio. Parte de tu clínica."
-        description="CLIMON acompaña tu atención en la Clínica Montalvo. Encuentra información sobre tus resultados y orientación para tu visita."
+        description="CLIMON reúne seis áreas de análisis dentro de la Clínica Montalvo. Conoce su alcance, la información sobre tus resultados y la orientación para tu visita."
       />
-      <section className="section-space" aria-label="Atención al paciente">
+      <AreasSection />
+      <section
+        className="section-space border-t border-line"
+        aria-label="Atención al paciente"
+      >
         <Container>
           <ServiceIndex linked={false} />
           <div className="notice mt-12">

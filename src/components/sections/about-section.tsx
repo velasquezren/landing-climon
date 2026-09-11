@@ -27,7 +27,7 @@ export function AboutSection() {
           </p>
           <div className="about-signature">
             <span aria-hidden="true">+</span>
-            <p>Parte de la {siteConfig.clinicName}.<br /><strong>Atención de persona a persona.</strong></p>
+            <p>Parte de la {siteConfig.clinicName}.<br /><strong>{siteConfig.essence}</strong></p>
           </div>
           <ButtonLink href="/nosotros" variant="text" className="mt-7">
             Conoce CLIMON

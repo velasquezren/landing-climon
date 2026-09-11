@@ -41,8 +41,8 @@ export function Hero() {
             </h1>
             <p className="intro-copy hero-description">
               Somos CLIMON, el laboratorio clínico de la {siteConfig.clinicName}.
-              Acompañamos tu atención con resultados que forman parte del cuidado
-              de tu salud.
+              Más de diez años reuniendo seis áreas de análisis en un mismo
+              laboratorio, para acompañar el cuidado de tu salud.
             </p>
             <div className="hero-actions">
               <ButtonLink href={siteConfig.resultsUrl}>

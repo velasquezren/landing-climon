@@ -5,10 +5,10 @@ export const siteConfig = {
   descriptor: "Laboratorio Clínico",
   clinicName: "Clínica Montalvo",
   legalName: "Laboratorio Clínico Climon S.R.L.",
-  location: "Santa Cruz, Bolivia",
+  location: "Santa Cruz de la Sierra, Bolivia",
   title: "CLIMON | Laboratorio Clínico de la Clínica Montalvo",
   description:
-    "CLIMON, laboratorio clínico de la Clínica Montalvo en Santa Cruz. Información de resultados y orientación para acompañar tu atención en la clínica.",
+    "CLIMON, laboratorio clínico integral de la Clínica Montalvo en Santa Cruz de la Sierra. Más de diez años de experiencia en hematología, química sanguínea, urianálisis, parasitología, serología y hormonas.",
   // Dominio previsto: confirmar antes de publicar. SITE_URL permite sustituirlo.
   url: process.env.SITE_URL || "https://climon.com",
   resultsUrl: "/resultados",
@@ -17,7 +17,7 @@ export const siteConfig = {
     phone: "",
     whatsapp: "", // Número internacional, solo dígitos.
     email: "",
-    address: "",
+    address: "Av. Universo 641, Barrio Urbarí — edificio de la Clínica Montalvo",
     hours: "",
     mapsUrl: "",
   },
@@ -42,11 +42,12 @@ export const siteConfig = {
       alt: "Profesional de CLIMON trabajando con una micropipeta en el laboratorio.",
     },
   },
+  essence: "Confianza que se analiza.",
   about: {
     intro:
-      "CLIMON es el laboratorio clínico que forma parte de la Clínica Montalvo, en Santa Cruz, Bolivia.",
+      "CLIMON es el laboratorio clínico integral que forma parte de la Clínica Montalvo, en Santa Cruz de la Sierra.",
     description:
-      "Acompañamos la atención de los pacientes de la clínica a través del trabajo de laboratorio y los resultados de sus estudios, como parte del cuidado y seguimiento de su salud.",
+      "Somos un establecimiento de nivel II legalmente establecido, que cumple con los requerimientos del SEDES. Con más de diez años de experiencia y un equipo altamente calificado, reunimos seis áreas de análisis en un mismo laboratorio para acompañar la prevención, el diagnóstico y el seguimiento de la salud de cada paciente.",
   },
 };
 

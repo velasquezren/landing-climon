@@ -30,8 +30,13 @@ export default function AboutPage() {
               Cerca de ti.
             </h2>
             <p className="body-copy mt-7">{siteConfig.about.description}</p>
+            <p className="body-copy mt-4">
+              Detrás de cada muestra hay un proceso que exige precisión,
+              conocimiento y responsabilidad. Esa es nuestra forma de entender el
+              trabajo de laboratorio: {siteConfig.essence.toLocaleLowerCase("es")}
+            </p>
             <ButtonLink href="/servicios" variant="text" className="mt-7">
-              Conocer nuestra atención
+              Conocer las áreas de análisis
             </ButtonLink>
           </div>
         </Container>

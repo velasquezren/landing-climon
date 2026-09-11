@@ -50,8 +50,8 @@ export function ServicesSection() {
             Estamos contigo.
           </SectionHeading>
           <p className="body-copy max-w-sm">
-            Información de resultados, orientación y atención del laboratorio,
-            como parte de tu experiencia en la Clínica Montalvo.
+            Seis áreas de análisis, información de resultados y orientación,
+            como parte de tu atención en la Clínica Montalvo.
           </p>
         </div>
         <ServiceIndex />

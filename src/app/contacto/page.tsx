@@ -5,7 +5,7 @@ import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata(
   "Contacto",
-  "Información de ubicación y atención al paciente de CLIMON en Santa Cruz, Bolivia.",
+  "CLIMON se encuentra en la Av. Universo 641, Barrio Urbarí, dentro del edificio de la Clínica Montalvo, en Santa Cruz de la Sierra.",
   "/contacto",
 );
 
@@ -15,7 +15,7 @@ export default function ContactPage() {
       <PageIntro
         eyebrow="Contacto"
         title="Estamos en Santa Cruz."
-        description="Encuentra aquí la información de ubicación y los canales oficiales de atención de CLIMON."
+        description="Atendemos dentro del edificio de la Clínica Montalvo, en el Barrio Urbarí. Aquí encontrarás nuestra ubicación y los canales oficiales de atención."
       />
       <section
         aria-labelledby="contact-details-heading"
