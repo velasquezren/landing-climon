@@ -222,6 +222,10 @@
     flex-shrink: 0;
     width: fit-content;
   }
+  /* Separa el logo del borde del contenedor solo en el encabezado. */
+  .site-header .brand {
+    margin-left: clamp(1rem, 2.5vw, 2rem);
+  }
   .brand-logo {
     display: block;
     width: 112px;
@@ -240,9 +244,6 @@
     font-size: 0.65rem;
     letter-spacing: 0.09em;
     line-height: 1.3;
-  }
-  .header-results {
-    margin-left: auto;
   }
   .nav-link {
     position: relative;
@@ -905,6 +906,9 @@
   .area-index li:nth-child(even) {
     padding-left: 2rem;
     border-left: 1px solid var(--line);
+  }
+  .header-results {
+    margin-left: auto;
   }
   .hero-grid {
     gap: 2rem;

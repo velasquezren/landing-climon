@@ -20,7 +20,7 @@ export function SiteNavigation({
     <>
       <nav
         aria-label="Navegación principal"
-        className="hidden items-center gap-7 lg:ml-6 lg:flex"
+        className="hidden items-center gap-7 lg:flex"
       >
         {items.map((item) => {
           const current = pathname === item.href;
