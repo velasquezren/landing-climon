@@ -19,6 +19,8 @@
   --white: var(--surface);
   --black: #000000;
   --ink: #14201e;
+  /* Tinta exacta del logotipo oficial; no se sustituye por el verde de marca. */
+  --logo-ink: #1d1e1c;
   --ink-soft: #4a5a57;
   --muted: var(--ink-soft);
   --paper: var(--surface-alt);
@@ -230,8 +232,9 @@
   }
   .brand-wordmark {
     display: block;
-    width: clamp(8rem, 24vw, 12.5rem);
+    width: clamp(7rem, 17vw, 9.5rem);
     height: auto;
+    color: var(--logo-ink);
   }
   .brand-name {
     font-family: var(--font-manrope), sans-serif;
