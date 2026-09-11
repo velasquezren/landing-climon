@@ -8,7 +8,7 @@ El propósito principal es presentar el laboratorio dentro de la atención de la
 
 ## Dirección visual
 
-Se conserva la composición editorial aprobada, predominio del blanco, escala de verdes con marca #006156 y acento #39ADA3, texto #14201E, botones con radio de 2 px, Manrope y Geist. El encabezado usa el logotipo horizontal vectorial (`src/components/layout/wordmark.tsx`, trazado del original oficial y coloreado con `currentColor`); el pie conserva el logotipo vertical con isotipo. Tres fotografías oficiales. Sin estadísticas, testimonios ni certificaciones inventadas. Movimiento mínimo y respeto por prefers-reduced-motion.
+Se conserva la composición editorial aprobada, predominio del blanco, escala de verdes con marca #006156 y acento #39ADA3, texto #14201E, botones con radio de 2 px, Manrope y Geist. Logo y tres fotografías oficiales. Sin estadísticas, testimonios ni certificaciones inventadas. Movimiento mínimo y respeto por prefers-reduced-motion.
 
 ## Contenido
 
